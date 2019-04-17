@@ -568,7 +568,7 @@ const StyledBox = styled.div`
   ${props => props.wrapProp && wrapStyle}
   ${props => props.overflowProp && overflowStyle(props.overflowProp)}
   ${props => props.elevationProp && elevationStyle}
-  ${props => props.animation && animationStyle}
+  ${/* XXX TBD */ null /* props => props.animation && animationStyle */}
   ${props => props.theme.box && props.theme.box.extend}
 `;
 
