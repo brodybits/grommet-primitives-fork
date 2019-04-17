@@ -454,6 +454,7 @@ const animationEnding = type => {
   return 'forwards';
 };
 
+/* ** XXX TBD WORKAROUND for issue with primitives: {{{
 const animationObjectStyle = (animation, theme) => {
   const bounds = animationBounds(animation.type, animation.size);
   if (bounds) {
@@ -535,6 +536,7 @@ const animationStyle = css`
     animation: ${animationItemStyle(props.animation, props.theme)};
   `};
 `;
+// ** XXX END OF WORKAROUND }}} */
 
 // NOTE: basis must be after flex! Otherwise, flex overrides basis
 const StyledBox = styled.div`
