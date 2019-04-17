@@ -564,15 +564,6 @@ const StyledBox = styled.div`
   ${props => props.fillProp && fillStyle(props.fillProp)}
   ${props => props.justify && justifyStyle}
   ${props =>
-    props.pad &&
-    edgeStyle(
-      'padding',
-      props.pad,
-      props.responsive,
-      props.theme.box.responsiveBreakpoint,
-      props.theme,
-    )}
-  ${props =>
     props.round && roundStyle(props.round, props.responsive, props.theme)}
   ${props => props.wrapProp && wrapStyle}
   ${props => props.overflowProp && overflowStyle(props.overflowProp)}
