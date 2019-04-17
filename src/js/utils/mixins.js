@@ -1,4 +1,4 @@
-import { css } from 'styled-components';
+import { css } from '../styled-imports';
 
 export const parseMetricToNum = fontAsString =>
   parseFloat(fontAsString.replace(/[^0-9/.]/g, ''), 10);
