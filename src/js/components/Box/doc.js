@@ -83,6 +83,7 @@ export const doc = Box => {
         opacity: PropTypes.oneOfType([
           PropTypes.oneOf(['weak', 'medium', 'strong']),
           PropTypes.bool,
+          PropTypes.number,
         ]),
         repeat: PropTypes.oneOfType([
           PropTypes.oneOf(['no-repeat', 'repeat']),
@@ -317,11 +318,8 @@ of indicating the DOM tag via the 'as' property.`,
       ]),
       PropTypes.string,
     ]).description('A fixed width.'),
-    wrap: PropTypes.bool
-      .description(
-        `Whether children can wrap if they
-      can't all fit.`,
-      )
+    wrap: PropTypes.oneOfType([PropTypes.bool, PropTypes.oneOf(['reverse'])])
+      .description(`Whether children can wrap if they can't all fit.`)
       .defaultValue(false),
   };
   return DocumentedBox;
